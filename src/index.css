@@ -2,95 +2,84 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* KYC App Design System - Optimized for Bharat users */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    /* Core backgrounds */
+    --background: 0 0% 98%;
+    --foreground: 210 15% 15%;
+    
+    /* Trust-building primary (Government blue inspired) */
+    --primary: 210 100% 40%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 210 100% 35%;
+    
+    /* Success green (Indian flag inspired) */
+    --success: 140 65% 42%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 140 45% 95%;
+    
+    /* Warning saffron (Indian flag inspired) */
+    --warning: 35 85% 55%;
+    --warning-foreground: 0 0% 100%;
+    --warning-light: 35 45% 95%;
+    
+    /* Card and surfaces */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 210 15% 15%;
+    --card-shadow: 210 20% 85%;
+    
+    /* Interactive elements */
+    --secondary: 210 25% 92%;
+    --secondary-foreground: 210 20% 25%;
+    --secondary-hover: 210 25% 88%;
+    
+    /* Neutral colors */
+    --muted: 210 15% 94%;
+    --muted-foreground: 210 15% 45%;
+    --border: 210 20% 88%;
+    --input: 210 20% 96%;
+    --ring: 210 100% 40%;
+    
+    /* Destructive */
+    --destructive: 0 75% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --destructive-light: 0 45% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* App-specific colors */
+    --progress-bg: 210 25% 92%;
+    --progress-fill: 210 100% 40%;
+    
+    /* Design system variables */
+    --radius: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+    
+    /* Shadows for depth */
+    --shadow-sm: 0 1px 2px 0 hsl(var(--card-shadow) / 0.1);
+    --shadow-md: 0 4px 6px -1px hsl(var(--card-shadow) / 0.15);
+    --shadow-lg: 0 10px 15px -3px hsl(var(--card-shadow) / 0.2);
+    
+    /* Transitions */
+    --transition: all 0.2s ease-in-out;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 210 15% 8%;
+    --foreground: 0 0% 95%;
+    --card: 210 15% 10%;
+    --card-foreground: 0 0% 95%;
+    --primary: 210 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 15% 15%;
+    --secondary-foreground: 0 0% 90%;
+    --muted: 210 15% 15%;
+    --muted-foreground: 210 10% 60%;
+    --border: 210 15% 20%;
+    --input: 210 15% 15%;
+    --ring: 210 100% 50%;
   }
 }
 
@@ -100,6 +89,32 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  /* KYC App specific styles */
+  .kyc-container {
+    @apply min-h-screen bg-background;
+  }
+  
+  .kyc-card {
+    @apply bg-card border border-border rounded-xl shadow-md p-6;
+  }
+  
+  .kyc-button-primary {
+    @apply bg-primary hover:bg-primary-hover text-primary-foreground font-medium px-6 py-4 rounded-lg transition-all duration-200 ease-in-out shadow-sm hover:shadow-md;
+  }
+  
+  .kyc-button-secondary {
+    @apply bg-secondary hover:bg-secondary-hover text-secondary-foreground font-medium px-6 py-4 rounded-lg transition-all duration-200 ease-in-out border border-border;
+  }
+  
+  .kyc-progress-bar {
+    @apply w-full bg-progress-bg rounded-full overflow-hidden;
+  }
+  
+  .kyc-progress-fill {
+    @apply h-2 bg-progress-fill transition-all duration-300 ease-out;
   }
 }
