@@ -8,20 +8,20 @@ export const WelcomeScreen = ({ onNext }: WelcomeScreenProps) => {
   const features = [
     {
       icon: Shield,
-      title: "सुरक्षित वेरिफिकेशन",
-      description: "आपकी जानकारी पूर्णतः सुरक्षित है",
+      title: "Secure Verification",
+      description: "Your information is completely secure",
       color: "text-success"
     },
     {
       icon: Clock,
-      title: "केवल 2 मिनट",
-      description: "तेज़ और आसान प्रक्रिया",
+      title: "Only 2 Minutes",
+      description: "Fast and easy process",
       color: "text-warning"
     },
     {
       icon: Users,
-      title: "10 लाख+ उपयोगकर्ता",
-      description: "भरोसेमंद सेवा",
+      title: "1 Million+ Users",
+      description: "Trusted service",
       color: "text-primary"
     }
   ];
@@ -34,10 +34,10 @@ export const WelcomeScreen = ({ onNext }: WelcomeScreenProps) => {
           <Shield className="w-10 h-10 text-primary-foreground" />
         </div>
         <h1 className="text-2xl font-bold text-foreground mb-2">
-          डिजिटल KYC
+          Digital KYC
         </h1>
         <p className="text-muted-foreground text-sm px-4">
-          आपकी पहचान की पुष्टि करें - आसान, तेज़ और सुरक्षित
+          Verify your identity - Easy, fast and secure
         </p>
       </div>
 
@@ -64,10 +64,10 @@ export const WelcomeScreen = ({ onNext }: WelcomeScreenProps) => {
       <div className="bg-success-light rounded-lg p-4 mb-8 border border-success/20">
         <div className="flex items-center space-x-2 mb-2">
           <Shield className="w-5 h-5 text-success" />
-          <span className="text-success font-medium text-sm">सरकारी मान्यता प्राप्त</span>
+          <span className="text-success font-medium text-sm">Government Approved</span>
         </div>
         <p className="text-success-foreground/80 text-xs">
-          यह सेवा डिजिटल इंडिया और आधार के साथ एकीकृत है
+          This service is integrated with Digital India and Aadhaar
         </p>
       </div>
 
@@ -76,13 +76,13 @@ export const WelcomeScreen = ({ onNext }: WelcomeScreenProps) => {
         onClick={onNext}
         className="kyc-button-primary w-full text-lg font-semibold"
       >
-        शुरू करें
+        Get Started
       </button>
 
       {/* Footer */}
       <p className="text-center text-xs text-muted-foreground mt-6 px-4">
-        आगे बढ़कर आप हमारी{" "}
-        <span className="text-primary">नियम और शर्तें</span> स्वीकार करते हैं
+        By proceeding, you accept our{" "}
+        <span className="text-primary">Terms and Conditions</span>
       </p>
     </div>
   );

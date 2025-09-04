@@ -20,21 +20,21 @@ export const MethodSelectionScreen = ({
   const methods = [
     {
       id: "digilocker" as KYCMethod,
-      title: "DigiLocker से",
-      subtitle: "सरकारी डिजिटल दस्तावेज़",
-      description: "आधार, पैन कार्ड सीधे DigiLocker से",
+      title: "From DigiLocker",
+      subtitle: "Government digital documents",
+      description: "Aadhaar, PAN card directly from DigiLocker",
       icon: Smartphone,
-      badge: "तेज़",
+      badge: "Fast",
       badgeColor: "bg-success text-success-foreground",
       recommended: true
     },
     {
       id: "document" as KYCMethod,
-      title: "दस्तावेज़ अपलोड करें",
-      subtitle: "फोटो खींचकर अपलोड करें",
-      description: "आधार, पैन, लाइसेंस, वोटर आईडी",
+      title: "Upload Documents",
+      subtitle: "Take photos and upload",
+      description: "Aadhaar, PAN, License, Voter ID",
       icon: FileText,
-      badge: "आसान",
+      badge: "Easy",
       badgeColor: "bg-warning text-warning-foreground",
       recommended: false
     }
@@ -63,10 +63,10 @@ export const MethodSelectionScreen = ({
         </button>
         <div>
           <h1 className="text-xl font-semibold text-foreground">
-            सत्यापन का तरीका चुनें
+            Choose Verification Method
           </h1>
           <p className="text-sm text-muted-foreground">
-            आपके लिए सुविधाजनक विकल्प चुनें
+            Select the convenient option for you
           </p>
         </div>
       </div>
@@ -90,7 +90,7 @@ export const MethodSelectionScreen = ({
               {method.recommended && (
                 <div className="absolute -top-2 right-4">
                   <span className="bg-primary text-primary-foreground text-xs px-2 py-1 rounded-full font-medium">
-                    सुझाया गया
+                    Recommended
                   </span>
                 </div>
               )}
@@ -127,10 +127,10 @@ export const MethodSelectionScreen = ({
       {/* Info Box */}
       <div className="bg-muted rounded-lg p-4">
         <h4 className="font-medium text-card-foreground text-sm mb-2">
-          ℹ️ जानकारी
+          ℹ️ Information
         </h4>
         <p className="text-xs text-muted-foreground">
-          दोनों तरीके समान रूप से सुरक्षित हैं। DigiLocker तेज़ है और मैन्युअल अपलोड में अधिक नियंत्रण मिलता है।
+          Both methods are equally secure. DigiLocker is faster and manual upload gives you more control.
         </p>
       </div>
 
@@ -144,7 +144,7 @@ export const MethodSelectionScreen = ({
             : "bg-muted text-muted-foreground cursor-not-allowed"
         }`}
       >
-        आगे बढ़ें
+        Continue
       </button>
     </div>
   );

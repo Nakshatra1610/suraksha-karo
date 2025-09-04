@@ -9,10 +9,10 @@ export const ProgressTracker = ({ currentStep, totalSteps, progress }: ProgressT
     <div className="space-y-3">
       <div className="flex justify-between items-center">
         <h2 className="text-sm font-medium text-foreground">
-          चरण {currentStep} / {totalSteps}
+          Step {currentStep} / {totalSteps}
         </h2>
         <span className="text-xs text-muted-foreground">
-          {Math.round(progress)}% पूर्ण
+          {Math.round(progress)}% Complete
         </span>
       </div>
       

@@ -15,10 +15,10 @@ export const FaceAuthScreen = ({ onNext, onBack, onFaceCapture }: FaceAuthScreen
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const instructions = [
-    "📱 फोन को आंखों के सामने सीधा रखें",
-    "💡 अच्छी रोशनी में बैठें",
-    "😊 प्राकृतिक चेहरे के भाव रखें",
-    "👓 चश्मा हटाने की आवश्यकता नहीं"
+    "📱 Hold your phone straight in front of your eyes",
+    "💡 Sit in good lighting",
+    "😊 Keep natural facial expressions",
+    "👓 No need to remove glasses"
   ];
 
   const handleStartCapture = () => {
@@ -70,10 +70,10 @@ export const FaceAuthScreen = ({ onNext, onBack, onFaceCapture }: FaceAuthScreen
         </button>
         <div>
           <h1 className="text-xl font-semibold text-foreground">
-            चेहरे की पहचान
+            Face Recognition
           </h1>
           <p className="text-sm text-muted-foreground">
-            लाइवनेस चेक और फेस मैच के लिए
+            For liveness check and face match
           </p>
         </div>
       </div>
@@ -82,7 +82,7 @@ export const FaceAuthScreen = ({ onNext, onBack, onFaceCapture }: FaceAuthScreen
       {captureState === "idle" && (
         <div className="bg-primary/5 rounded-lg p-4 border border-primary/20">
           <h3 className="font-medium text-primary mb-3 text-sm">
-            📋 निर्देश
+            📋 Instructions
           </h3>
           <div className="space-y-2">
             {instructions.map((instruction, index) => (
@@ -103,16 +103,16 @@ export const FaceAuthScreen = ({ onNext, onBack, onFaceCapture }: FaceAuthScreen
                 <Camera className="w-12 h-12 text-muted-foreground" />
               </div>
               <h3 className="text-lg font-semibold text-card-foreground mb-2">
-                अपना फोटो लें
+                Take Your Photo
               </h3>
               <p className="text-sm text-muted-foreground mb-6">
-                सेल्फी कैमरा का उपयोग करके अपना फोटो लें
+                Use the selfie camera to take your photo
               </p>
               <button
                 onClick={handleStartCapture}
                 className="kyc-button-primary"
               >
-                कैमरा खोलें
+                Open Camera
               </button>
             </>
           )}
@@ -130,10 +130,10 @@ export const FaceAuthScreen = ({ onNext, onBack, onFaceCapture }: FaceAuthScreen
               )}
               <div className="flex items-center justify-center space-x-2 mb-4">
                 <div className="w-5 h-5 border-2 border-warning border-t-transparent rounded-full animate-spin" />
-                <span className="text-warning font-medium">वेरिफाई हो रहा है...</span>
+                <span className="text-warning font-medium">Verifying...</span>
               </div>
               <p className="text-sm text-muted-foreground">
-                कृपया प्रतीक्षा करें, हम आपकी पहचान की जांच कर रहे हैं
+                Please wait, we are checking your identity
               </p>
             </>
           )}
@@ -151,10 +151,10 @@ export const FaceAuthScreen = ({ onNext, onBack, onFaceCapture }: FaceAuthScreen
               )}
               <div className="flex items-center justify-center space-x-2 mb-4">
                 <CheckCircle2 className="w-6 h-6 text-success" />
-                <span className="text-success font-semibold">सफलतापूर्वक वेरिफाई!</span>
+                <span className="text-success font-semibold">Successfully Verified!</span>
               </div>
               <p className="text-sm text-muted-foreground mb-4">
-                आपकी पहचान की पुष्टि हो गई है
+                Your identity has been confirmed
               </p>
               <div className="flex space-x-3">
                 <button
@@ -162,7 +162,7 @@ export const FaceAuthScreen = ({ onNext, onBack, onFaceCapture }: FaceAuthScreen
                   className="kyc-button-secondary flex items-center space-x-2"
                 >
                   <RotateCcw className="w-4 h-4" />
-                  <span>दोबारा लें</span>
+                  <span>Retake</span>
                 </button>
               </div>
             </>
@@ -174,16 +174,16 @@ export const FaceAuthScreen = ({ onNext, onBack, onFaceCapture }: FaceAuthScreen
                 <AlertTriangle className="w-12 h-12 text-destructive" />
               </div>
               <h3 className="text-lg font-semibold text-destructive mb-2">
-                कुछ गलत हुआ
+                Something went wrong
               </h3>
               <p className="text-sm text-muted-foreground mb-6">
-                कृपया दोबारा कोशिश करें और निर्देशों का पालन करें
+                Please try again and follow the instructions
               </p>
               <button
                 onClick={handleRetry}
                 className="kyc-button-primary"
               >
-                दोबारा कोशिश करें
+                Try Again
               </button>
             </>
           )}
@@ -196,11 +196,11 @@ export const FaceAuthScreen = ({ onNext, onBack, onFaceCapture }: FaceAuthScreen
           <CheckCircle2 className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
           <div>
             <h4 className="font-medium text-card-foreground text-sm mb-1">
-              सुरक्षा जानकारी
+              Security Information
             </h4>
             <p className="text-xs text-muted-foreground">
-              आपका फोटो एन्क्रिप्टेड है और केवल वेरिफिकेशन के लिए उपयोग होगा। 
-              यह किसी तीसरे पक्ष के साथ साझा नहीं किया जाएगा।
+              Your photo is encrypted and will only be used for verification. 
+              It will not be shared with any third party.
             </p>
           </div>
         </div>
@@ -226,7 +226,7 @@ export const FaceAuthScreen = ({ onNext, onBack, onFaceCapture }: FaceAuthScreen
             : "bg-muted text-muted-foreground cursor-not-allowed"
         }`}
       >
-        पूर्ण करें
+        Complete
       </button>
     </div>
   );

@@ -16,8 +16,8 @@ export const SuccessScreen = ({ data }: SuccessScreenProps) => {
   const handleShare = () => {
     if (navigator.share) {
       navigator.share({
-        title: "मेरा KYC सफल!",
-        text: `मैंने अपना डिजिटल KYC पूरा कर लिया है। वेरिफिकेशन ID: ${verificationId}`,
+        title: "My KYC Successful!",
+        text: `I have completed my digital KYC. Verification ID: ${verificationId}`,
       });
     }
   };
@@ -30,10 +30,10 @@ export const SuccessScreen = ({ data }: SuccessScreenProps) => {
           <CheckCircle className="w-12 h-12 text-success-foreground" />
         </div>
         <h1 className="text-2xl font-bold text-success mb-2">
-          🎉 बधाई हो!
+          🎉 Congratulations!
         </h1>
         <p className="text-muted-foreground text-sm px-4">
-          आपका KYC सफलतापूर्वक पूरा हो गया है
+          Your KYC has been completed successfully
         </p>
       </div>
 
@@ -42,21 +42,21 @@ export const SuccessScreen = ({ data }: SuccessScreenProps) => {
         <div className="text-center space-y-4">
           <div className="bg-success-light rounded-lg p-4">
             <h3 className="font-semibold text-success mb-2">
-              वेरिफिकेशन पूर्ण
+              Verification Complete
             </h3>
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
-                <span className="text-muted-foreground">वेरिफिकेशन ID:</span>
+                <span className="text-muted-foreground">Verification ID:</span>
                 <span className="font-mono font-semibold text-card-foreground">{verificationId}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-muted-foreground">विधि:</span>
+                <span className="text-muted-foreground">Method:</span>
                 <span className="font-medium text-card-foreground">
-                  {data.method === "digilocker" ? "DigiLocker" : "दस्तावेज़ अपलोड"}
+                  {data.method === "digilocker" ? "DigiLocker" : "Document Upload"}
                 </span>
               </div>
               <div className="flex justify-between">
-                <span className="text-muted-foreground">समय:</span>
+                <span className="text-muted-foreground">Time:</span>
                 <span className="font-medium text-card-foreground">
                   {new Date().toLocaleDateString("hi-IN")} {new Date().toLocaleTimeString("hi-IN", { hour: '2-digit', minute: '2-digit' })}
                 </span>
@@ -69,7 +69,7 @@ export const SuccessScreen = ({ data }: SuccessScreenProps) => {
       {/* What's Next */}
       <div className="kyc-card mb-6">
         <h3 className="font-semibold text-card-foreground mb-4 text-center">
-          अब क्या?
+          What's Next?
         </h3>
         <div className="space-y-3">
           <div className="flex items-center space-x-3 p-3 bg-muted rounded-lg">
@@ -77,8 +77,8 @@ export const SuccessScreen = ({ data }: SuccessScreenProps) => {
               <CheckCircle className="w-5 h-5 text-primary-foreground" />
             </div>
             <div>
-              <p className="font-medium text-sm text-card-foreground">तुरंत उपयोग करें</p>
-              <p className="text-xs text-muted-foreground">आप अब सभी सेवाओं का उपयोग कर सकते हैं</p>
+              <p className="font-medium text-sm text-card-foreground">Use Immediately</p>
+              <p className="text-xs text-muted-foreground">You can now use all services</p>
             </div>
           </div>
           <div className="flex items-center space-x-3 p-3 bg-muted rounded-lg">
@@ -86,8 +86,8 @@ export const SuccessScreen = ({ data }: SuccessScreenProps) => {
               <Download className="w-5 h-5 text-success-foreground" />
             </div>
             <div>
-              <p className="font-medium text-sm text-card-foreground">प्रमाण पत्र डाउनलोड करें</p>
-              <p className="text-xs text-muted-foreground">भविष्य के संदर्भ के लिए सेव करें</p>
+              <p className="font-medium text-sm text-card-foreground">Download Certificate</p>
+              <p className="text-xs text-muted-foreground">Save for future reference</p>
             </div>
           </div>
         </div>
@@ -100,7 +100,7 @@ export const SuccessScreen = ({ data }: SuccessScreenProps) => {
           className="w-full kyc-button-primary flex items-center justify-center space-x-2"
         >
           <Download className="w-5 h-5" />
-          <span>प्रमाण पत्र डाउनलोड करें</span>
+          <span>Download Certificate</span>
         </button>
         
         <div className="flex space-x-3">
@@ -109,14 +109,14 @@ export const SuccessScreen = ({ data }: SuccessScreenProps) => {
             className="flex-1 kyc-button-secondary flex items-center justify-center space-x-2"
           >
             <Share2 className="w-4 h-4" />
-            <span>साझा करें</span>
+            <span>Share</span>
           </button>
           <button
             onClick={() => window.location.reload()}
             className="flex-1 kyc-button-secondary flex items-center justify-center space-x-2"
           >
             <Home className="w-4 h-4" />
-            <span>होम</span>
+            <span>Home</span>
           </button>
         </div>
       </div>
@@ -124,17 +124,17 @@ export const SuccessScreen = ({ data }: SuccessScreenProps) => {
       {/* Support Info */}
       <div className="text-center mt-8 px-4">
         <p className="text-xs text-muted-foreground mb-2">
-          समस्या है? हमसे संपर्क करें
+          Having problems? Contact us
         </p>
         <div className="flex justify-center space-x-4 text-xs">
           <button className="text-primary hover:underline">
-            📞 हेल्पलाइन
+            📞 Helpline
           </button>
           <button className="text-primary hover:underline">
-            💬 चैट सपोर्ट
+            💬 Chat Support
           </button>
           <button className="text-primary hover:underline">
-            📧 ईमेल
+            📧 Email
           </button>
         </div>
       </div>

@@ -23,9 +23,9 @@ export const DocumentUploadScreen = ({
   onDocumentsUpload 
 }: DocumentUploadScreenProps) => {
   const [documents, setDocuments] = useState<DocumentType[]>([
-    { id: "aadhaar", name: "आधार कार्ड", required: true },
-    { id: "pan", name: "पैन कार्ड", required: true },
-    { id: "additional", name: "अतिरिक्त दस्तावेज़", required: false }
+    { id: "aadhaar", name: "Aadhaar Card", required: true },
+    { id: "pan", name: "PAN Card", required: true },
+    { id: "additional", name: "Additional Document", required: false }
   ]);
   
   const [uploading, setUploading] = useState<string | null>(null);
@@ -87,10 +87,10 @@ export const DocumentUploadScreen = ({
           </button>
           <div>
             <h1 className="text-xl font-semibold text-foreground">
-              DigiLocker से कनेक्ट करें
+              Connect with DigiLocker
             </h1>
             <p className="text-sm text-muted-foreground">
-              आपके डिजिटल दस्तावेज़ सुरक्षित रूप से प्राप्त करें
+              Access your digital documents securely
             </p>
           </div>
         </div>
@@ -104,15 +104,15 @@ export const DocumentUploadScreen = ({
             DigiLocker Authorization
           </h3>
           <p className="text-sm text-muted-foreground mb-6">
-            हम आपके आधार और पैन कार्ड की जानकारी डिजिटल रूप से प्राप्त करेंगे
+            We will digitally access your Aadhaar and PAN card information
           </p>
           
           <button className="kyc-button-primary w-full mb-4">
-            DigiLocker से कनेक्ट करें
+            Connect with DigiLocker
           </button>
           
           <p className="text-xs text-muted-foreground">
-            यह सुरक्षित और तत्काल प्रक्रिया है
+            This is a secure and instant process
           </p>
         </div>
       </div>
@@ -131,10 +131,10 @@ export const DocumentUploadScreen = ({
         </button>
         <div>
           <h1 className="text-xl font-semibold text-foreground">
-            दस्तावेज़ अपलोड करें
+            Upload Documents
           </h1>
           <p className="text-sm text-muted-foreground">
-            {uploadedRequiredCount}/{allRequiredCount} आवश्यक दस्तावेज़ अपलोड किए गए
+            {uploadedRequiredCount}/{allRequiredCount} required documents uploaded
           </p>
         </div>
       </div>
@@ -145,12 +145,12 @@ export const DocumentUploadScreen = ({
           <AlertCircle className="w-5 h-5 text-warning mt-0.5 flex-shrink-0" />
           <div>
             <h4 className="font-medium text-warning-foreground text-sm mb-1">
-              अपलोड करने से पहले ध्यान दें
+              Please note before uploading
             </h4>
             <ul className="text-xs text-warning-foreground/80 space-y-1">
-              <li>• फोटो साफ और पढ़ने योग्य हो</li>
-              <li>• पूरा दस्तावेज़ दिखाई दे रहा हो</li>
-              <li>• फाइल साइज़ 5MB से कम हो</li>
+              <li>• Photo should be clear and readable</li>
+              <li>• Complete document should be visible</li>
+              <li>• File size should be less than 5MB</li>
             </ul>
           </div>
         </div>
@@ -185,9 +185,9 @@ export const DocumentUploadScreen = ({
                       )}
                     </h3>
                     <p className="text-xs text-muted-foreground">
-                      {doc.file ? `अपलोड किया गया: ${doc.file.name}` : 
-                       uploading === doc.id ? "अपलोड हो रहा है..." :
-                       "फोटो खींचें या फाइल चुनें"}
+                      {doc.file ? `Uploaded: ${doc.file.name}` : 
+                       uploading === doc.id ? "Uploading..." :
+                       "Take photo or select file"}
                     </p>
                   </div>
                 </div>
@@ -210,14 +210,14 @@ export const DocumentUploadScreen = ({
                     className="flex-1 kyc-button-secondary flex items-center justify-center space-x-2"
                   >
                     <Camera className="w-4 h-4" />
-                    <span>फोटो खींचें</span>
+                    <span>Take Photo</span>
                   </button>
                   <button
                     onClick={() => handleFileSelect(doc.id)}
                     className="flex-1 kyc-button-secondary flex items-center justify-center space-x-2"
                   >
                     <Upload className="w-4 h-4" />
-                    <span>फाइल चुनें</span>
+                    <span>Select File</span>
                   </button>
                 </div>
               )}
@@ -246,7 +246,7 @@ export const DocumentUploadScreen = ({
             : "bg-muted text-muted-foreground cursor-not-allowed"
         }`}
       >
-        आगे बढ़ें
+        Continue
       </button>
     </div>
   );
